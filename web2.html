@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tutorial Membuat Website Dengan React Js</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,700i%7cNunito+Sans:400,400i,700,700i">
+
+    <link rel="stylesheet" type="text/css" href="web2.css">
+
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" type="text/css" href="web2.css">
+    
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-64826CLMHE&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KJZ2C4"></script><script src="https://connect.facebook.net/signals/config/597841967035840?v=2.9.48&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
+        var pagination_next_page_number       = '',
+            pagination_available_pages_number = '',
+            url = "https://blog.hacktiv8.com",
+            //optional: set your custom ghost_root url, default is `"/ghost/api/v2"`
+            ghost_root_url = "/ghost/api/v2";
+    </script>
+    
+    <script src="/assets/js/jquery-3.5.0.min.js?v=1c1332f033"></script>
+
+    <script>
+        if(typeof(Storage) !== 'undefined') {
+			if (localStorage.getItem('selected-theme') == 'light') {
+				$(document.documentElement).attr('data-theme', 'light');
+			}
+			else if (localStorage.getItem('selected-theme') == 'dark') {
+				$(document.documentElement).attr('data-theme', 'dark');
+			}
+        }
+    </script>
+    
+    <meta name="description" content="Sebagai salah satu framework populer, React Js kerap digunakan untuk membuat front-end dari sebuah web atau aplikasi. Berikut penjelasan dan tutorialnya.">
+    <link rel="canonical" href="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/amp/">
+    
+    <meta property="og:site_name" content="HACKTIV8 Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Tutorial Membuat Website Dengan React Js">
+    <meta property="og:description" content="Sebagai salah satu framework populer, React Js kerap digunakan untuk membuat front-end dari sebuah web atau aplikasi. Berikut penjelasan dan tutorialnya.">
+    <meta property="og:url" content="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/">
+    <meta property="og:image" content="https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-01--23-.jpg">
+    <meta property="article:published_time" content="2021-07-02T10:59:47.000Z">
+    <meta property="article:modified_time" content="2021-07-02T10:59:47.000Z">
+    <meta property="article:tag" content="React js">
+    <meta property="article:tag" content="tutorial react js">
+    <meta property="article:tag" content="belajar react js">
+    <meta property="article:tag" content="framework react js">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/hacktiv8id">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tutorial Membuat Website Dengan React Js">
+    <meta name="twitter:description" content="Sebagai salah satu framework populer, React Js kerap digunakan untuk membuat front-end dari sebuah web atau aplikasi. Berikut penjelasan dan tutorialnya.">
+    <meta name="twitter:url" content="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/">
+    <meta name="twitter:image" content="https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-01--23-.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="HACKTIV8">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="React js, tutorial react js, belajar react js, framework react js">
+    <meta name="twitter:site" content="@hacktiv8id">
+    <meta property="og:image:width" content="1201">
+    <meta property="og:image:height" content="801">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "HACKTIV8 Blog",
+        "url": "https://blog.hacktiv8.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.hacktiv8.com/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "HACKTIV8",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg",
+            "width": 542,
+            "height": 542
+        },
+        "url": "https://blog.hacktiv8.com/author/hacktiv8/",
+        "sameAs": [
+            "https://hacktiv8.com"
+        ]
+    },
+    "headline": "Tutorial Membuat Website Dengan React Js",
+    "url": "https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/",
+    "datePublished": "2021-07-02T10:59:47.000Z",
+    "dateModified": "2021-07-02T10:59:47.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-01--23-.jpg",
+        "width": 1201,
+        "height": 801
+    },
+    "keywords": "React js, tutorial react js, belajar react js, framework react js",
+    "description": "Ketika mengembangkan website ataupun aplikasi, kita wajib menggunakan framework\nyang sesuai dengan kebutuhan masing-masing. Salah satu framework [Mengenal\nFramework Flutter Untuk Membuat Aplikasi] yang paling populer digunakan di\nkalangan web developer saat ini adalah React Js. React Js kerap digunakan\nsebagai framework untuk membuat bagian front-end dari sebuah web atau aplikasi.\nApabila kamu ingin membuat desain User Interface (UI) website yang menarik dan\ninteraktif, tentu kamu perlu belajar ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.hacktiv8.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.42">
+    <link rel="alternate" type="application/rss+xml" title="HACKTIV8 Blog" href="https://blog.hacktiv8.com/rss/">
+    
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '597841967035840'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=597841967035840&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJZ2C4');</script>
+<!-- End Google Tag Manager -->
+    
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="post-template tag-react-js tag-tutorial-react-js tag-belajar-react-js tag-framework-react-js">
+
+    
+<header id="header">
+    <div class="container">
+        <div class="header-flex">
+            <div class="header-column left">
+                <div class="navbar-brand">
+                    <div class="navbar-title">
+                            <h1><a href="https://blog.hacktiv8.com">HACKTIV8 Blog</a></h1>
+                        <p class="navbar-description"></p>
+                    </div>
+                    <nav class="navbar-menu">
+                        <ul class="nav nav-list">
+    <!-- Loop through the navigation items -->
+        <li class="nav-list-item nav-home"><a href="https://blog.hacktiv8.com/">HOME</a></li>
+        <li class="nav-list-item nav-hacktiv8-program"><a href="https://www.hacktiv8.com/full-stack-javascript-immersive">HACKTIV8 Program</a></li>
+    <!-- End the loop -->
+</ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-column right">
+                <div class="navbar-tools">
+                    <a href="#" class="nav-darkmode js-darkmode-toggle"><svg class="svg-darkmode svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M435.5,74.7A255.1,255.1,0,0,0,0,255.1,255,255,0,0,0,255.1,510.2,255.1,255.1,0,0,0,435.5,74.7ZM255.1,473.8V36.4c120.6,0,218.7,98.1,218.7,218.7S375.7,473.8,255.1,473.8Z"></path></svg></a>
+                    <a href="#" class="nav-search js-search-toggle"><svg class="svg-search svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M506,474.903251 L363.6,331.579608 C391.466667,296.745847 408.266667,252.605355 408.266667,204.609219 C408.266667,92.2636912 316.933333,1.19068968 204.133333,1.19068968 C91.3333333,1.19068968 0,92.3966445 0,204.742172 C0,317.087699 91.3333333,408.160701 204.133333,408.160701 C252.933333,408.160701 297.6,391.14268 332.8,362.690677 L474.266667,505.083647 C478.533333,509.604059 484.4,511.864265 490.133333,511.864265 C495.6,511.864265 501.066667,509.869966 505.2,505.881367 C514,497.50531 514.266667,483.678168 506,474.903251 Z M204.133333,364.41907 C161.333333,364.41907 121.066667,347.799909 90.8,317.619513 C60.5333333,287.439116 43.8666667,247.287224 43.8666667,204.742172 C43.8666667,162.064167 60.5333333,121.912274 90.8,91.8648314 C121.066667,61.6844352 161.333333,45.0652744 204.133333,45.0652744 C246.933333,45.0652744 287.2,61.6844352 317.466667,91.8648314 C347.733333,122.045228 364.4,162.19712 364.4,204.742172 C364.4,247.420177 347.733333,287.57207 317.466667,317.619513 C287.2,347.799909 246.933333,364.41907 204.133333,364.41907 Z"></path></svg></a>
+                </div>
+            </div>
+            <a href="#" class="mobile-menu-toggle js-menu-toggle"><svg class="svg-close svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"></path></svg></a>
+            <a href="#" class="mobile-search-toggle js-search-toggle"><svg class="svg-search svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M506,474.903251 L363.6,331.579608 C391.466667,296.745847 408.266667,252.605355 408.266667,204.609219 C408.266667,92.2636912 316.933333,1.19068968 204.133333,1.19068968 C91.3333333,1.19068968 0,92.3966445 0,204.742172 C0,317.087699 91.3333333,408.160701 204.133333,408.160701 C252.933333,408.160701 297.6,391.14268 332.8,362.690677 L474.266667,505.083647 C478.533333,509.604059 484.4,511.864265 490.133333,511.864265 C495.6,511.864265 501.066667,509.869966 505.2,505.881367 C514,497.50531 514.266667,483.678168 506,474.903251 Z M204.133333,364.41907 C161.333333,364.41907 121.066667,347.799909 90.8,317.619513 C60.5333333,287.439116 43.8666667,247.287224 43.8666667,204.742172 C43.8666667,162.064167 60.5333333,121.912274 90.8,91.8648314 C121.066667,61.6844352 161.333333,45.0652744 204.133333,45.0652744 C246.933333,45.0652744 287.2,61.6844352 317.466667,91.8648314 C347.733333,122.045228 364.4,162.19712 364.4,204.742172 C364.4,247.420177 347.733333,287.57207 317.466667,317.619513 C287.2,347.799909 246.933333,364.41907 204.133333,364.41907 Z"></path></svg></a>
+        </div>
+    </div>
+</header>
+
+<div class="search-wrap js-search result">
+    <div class="search-container">
+
+        <form class="search-form search-field">
+            <span class="search-close js-search-toggle"><svg class="svg-close svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M485.875811,0.000615602348 L511.99959,26.124405 L282.12259,256.000616 L511.999384,485.876826 L485.875605,512.000616 L255.99959,282.123616 L26.1235737,512.000616 L-0.000205155031,485.876826 L229.87559,256.000616 L-0.000410401566,26.124405 L26.1233685,0.000615602348 L255.99959,229.877616 L485.875811,0.000615602348 Z"></path></svg></span>
+
+            <input class="search-input js-search-input" placeholder="Type to Search" type="search">
+            <p class="search-info js-search-error" style="display: none">The content API key is missing, please read the <a href="https://docs.maltiv.com/korima#contentapi">theme documentation</a>.</p>
+        </form>
+        
+        <div class="search-results js-search-results">
+            <div class="js-search-result"></div>
+        </div>
+
+    </div>    
+</div>
+
+<aside class="mobile-nav">
+    <a href="#" class="mobile-menu-close js-menu-toggle"><svg class="svg-close svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M485.875811,0.000615602348 L511.99959,26.124405 L282.12259,256.000616 L511.999384,485.876826 L485.875605,512.000616 L255.99959,282.123616 L26.1235737,512.000616 L-0.000205155031,485.876826 L229.87559,256.000616 L-0.000410401566,26.124405 L26.1233685,0.000615602348 L255.99959,229.877616 L485.875811,0.000615602348 Z"></path></svg></a>
+    <div class="mobile-menu-wrap">
+        <nav class="mobile-menu">
+            <ul class="nav nav-list">
+    <!-- Loop through the navigation items -->
+        <li class="nav-list-item nav-home"><a href="https://blog.hacktiv8.com/">HOME</a></li>
+        <li class="nav-list-item nav-hacktiv8-program"><a href="https://www.hacktiv8.com/full-stack-javascript-immersive">HACKTIV8 Program</a></li>
+    <!-- End the loop -->
+</ul>
+        </nav>
+
+    </div>
+</aside>
+<div class="mobile-overlay js-mobile-overlay"></div>
+
+<main id="main-content" class="site-post">
+    <progress class="post-progress" value="0"></progress>
+
+    <div class="container">
+
+        <article id="post" class="post-60deef99d7e686003bb7c307 post tag-react-js tag-tutorial-react-js tag-belajar-react-js tag-framework-react-js">
+	
+            <div class="post-content">
+
+                <header class="post-header">
+                    
+                    <div class="post-cover">
+                        <figure class="post-full-image">
+                            <a href="/content/images/size/w2000/2021/07/article-blog-2-01--23-.jpg">
+                                <img srcset="/content/images/size/w300/2021/07/article-blog-2-01--23-.jpg 300w,
+                                            /content/images/size/w800/2021/07/article-blog-2-01--23-.jpg 600w,
+                                            /content/images/size/w1000/2021/07/article-blog-2-01--23-.jpg 1000w,
+                                            /content/images/size/w2000/2021/07/article-blog-2-01--23-.jpg 2000w" sizes="(max-width: 800px) 400px,
+                                        (max-width: 1170px) 1170px,
+                                            2000px" src="/content/images/size/w2000/2021/07/article-blog-2-01--23-.jpg" alt="Cara Membuat Website Dengan React Js">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="post-meta">
+                        <div class="post-tag">
+                            
+                            <a href="/tag/react-js/">React js</a>, <a href="/tag/tutorial-react-js/">tutorial react js</a>, <a href="/tag/belajar-react-js/">belajar react js</a>, <a href="/tag/framework-react-js/">framework react js</a>
+                        </div>
+
+                        <h1 class="post-title">Cara Membuat Website Dengan React Js</h1>
+                        
+                        <div class="post-datetime">
+                            <span><time datetime="2021-07-02">July 02, 2021</time></span>
+                            <span>-</span>
+                            <span>3 min read</span>
+                        </div>
+
+                        <div class="post-author">
+                            <div class="post-author-avatar">
+                                <a href="/author/hacktiv8/" title="HACKTIV8" class="author-hacktiv8">
+                                    <img class="avatar avatar-80" src=" https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg " alt="HACKTIV8">
+                                </a>
+                            </div>
+                            <a href="/author/hacktiv8/" title="HACKTIV8" class="author-hacktiv8 post-author-name">HACKTIV8</a>
+                        </div>
+                    </div>
+                    
+                </header>
+
+                <div class="post-inner">
+
+                    <div class="post-article">
+                        
+                        <p>Ketika mengembangkan website ataupun aplikasi, kita wajib menggunakan framework yang sesuai dengan kebutuhan masing-masing. Salah satu <a href="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/Mengenal%20Framework%20Flutter%20Untuk%20Membuat%20Aplikasi">framework</a> yang paling populer digunakan di kalangan web developer saat ini adalah React Js. React Js kerap digunakan sebagai framework untuk membuat bagian front-end dari sebuah web atau aplikasi. Apabila kamu ingin membuat desain User Interface (UI) website yang menarik dan interaktif, tentu kamu perlu belajar React Js ini. &nbsp;</p><p>Popularitas React Js terbukti dengan aplikasi – aplikasi yang menggunakannya seperti Facebook, WhatsApp, Netflix, dan Instagram. Meski begitu, React Js bukanlah full-featured framework, melainkan sebuah JavaScript Library yang digunakan untuk membangun User Interface.</p><h2 id="apa-itu-react-js">Apa itu React Js</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-03--16-.jpg" class="kg-image" alt="" srcset="https://blog.hacktiv8.com/content/images/size/w600/2021/07/article-blog-2-03--16-.jpg 600w, https://blog.hacktiv8.com/content/images/size/w1000/2021/07/article-blog-2-03--16-.jpg 1000w, https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-03--16-.jpg 1201w" sizes="(min-width: 720px) 720px"><figcaption>Pengertian React Js</figcaption></figure><p>React Js adalah JavaScript Library dengan sistem open source yang dikembangkan oleh Jordan Walke (Developer Facebook) pada tahun 2013 silam. Library ini berisi berbagai kode JavaScript yang sudah tertulis (pre-written). Sehingga, proses coding menjadi lebih efisien karena kamu hanya tinggal mengambil kode yang ingin digunakan. Penggunaan <a href="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/Mengenal%20React%20Native:%20Framework%20Terbaik%20untuk%20Mobile%20Developer">React</a> Js hanya membutuhkan beberapa software saja dan tidak membutuhkan banyak RAM ataupun memori internal. Framework ini dapat mendesain tampilan sederhana untuk setiap level dalam aplikasi, sehingga dapat digunakan untuk membuat dan mengembangkan pembuatan aplikasi berbasis web.</p><h2 id="keunggulan-react-js">Keunggulan React Js</h2><p>Ada beberapa fitur yang menjadi keunggulan React Js. Berikut beberapa di antaranya.</p><h3 id="declarative">Declarative</h3><p>React dapat membuat UI (User Interfaces) yang interaktif, sehingga dapat dengan mudah membuat desain yang simple untuk di setiap state di dalam aplikasi. Declarative views dapat membuat kode lebih mudah untuk di prediksi dan lebih mudah untuk di debug.</p><h3 id="component-based">Component – Based</h3><p>React dapat membuat Encapsulated Component yang dapat mengatur setiap tahapannya, lalu dapat membuat complex UIs berdasarkan kemampuan itu.</p><h3 id="learn-once-write-anywhere">Learn Once, Write Anywhere</h3><p>Developer dapat mengembangkan fitur baru menggunakan react tanpa mengubah kode sebelumnya, react juga dapat bekerja menggunakan Node JS dan mobile apps menggunakan React Native.</p><h2 id="react-js-tutorial">React Js Tutorial</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-02--18-.jpg" class="kg-image" alt="" srcset="https://blog.hacktiv8.com/content/images/size/w600/2021/07/article-blog-2-02--18-.jpg 600w, https://blog.hacktiv8.com/content/images/size/w1000/2021/07/article-blog-2-02--18-.jpg 1000w, https://blog.hacktiv8.com/content/images/2021/07/article-blog-2-02--18-.jpg 1201w" sizes="(min-width: 720px) 720px"><figcaption>Tutorial React Js</figcaption></figure><p>Setelah kamu mengetahui apa itu React Js dan keunggulan fiturnya, sekarang kita akan mencoba membuat web dengan React Js. Pertama-tama, kamu perlu menyiapkan web browser versi terbaru. Kamu juga membutuhkan teks editor, atau bisa menggunakan Visual Studio Code gratis yang lebih mudah digunakan. Apabila kamu masih pemula, kamu juga bisa memanfaatkan online playground untuk belajar seperti Glitch, CodePen dan Codesanbox. Lalu, pastikan kamu sudah memahami tentang fitur-fitur ES6, seperti class, arrow function dan variabel (let, const, var), karena akan banyak digunakan pada React. Setelah semua sudah siap, ikuti langkah-langkah berikut:</p><ul><li>Buat folder baru terlebih dahulu, bebas mau dimana saja dan beri nama Latihan React atau sesuai keinginan masing-masing.</li><li>Kemudian di dalam folder tadi, buat file baru dengan nama hello-react.html</li><li>Lalu copy code berikut ini dan paste ke file hello-react.html tadi</li></ul><p>&lt;!DOCTYPE html&gt;</p><p>&lt;html&gt;<br></p><p>&lt;head&gt;</p><p>&lt;meta charset="utf-8" /&gt;</p><p>&lt;title&gt;Belajar Reactjs&lt;/title&gt;</p><p>&lt;script src="https://unpkg.com/react@16/umd/react.production.min.js"&gt;&lt;/script&gt;</p><p>&lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</p><p>&lt;script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"&gt;&lt;/script&gt;</p><p>&lt;/head&gt;<br></p><p>&lt;body&gt;<br></p><p>&lt;div id="app"&gt;&lt;/div&gt;<br></p><p>&lt;script type="text/babel"&gt;</p><p>class Hello extends React.Component {</p><p>render() {</p><p>return &lt;h1&gt;Hello World Reactjs!&lt;/h1&gt;</p><p>}</p><p>}<br></p><p>ReactDOM.render(&lt;Hello/&gt;, <em>document</em>.getElementById("app"));</p><p>&lt;/script&gt;<br></p><p>&lt;/body&gt;</p><p>&lt;/html&gt;</p><ul><li>Setelah itu simpan file hello-react.html dan buka dengan web browser.</li></ul><p>Di dalam source code tersebut terdapat library yang digunakan untuk menjalankan React Js agar source code tadi dapat berjalan. Kamu membutuhkan koneksi internet karena source tadi akan terhubung dengan server. Berikut fungsi masing-masing komponen kode utama pada contoh di atas.</p><ul><li>React.js: Library utama yang digunakan untuk membuat komponen.</li><li>Babel.js: Salah satu kode Javascript yang ditemukan pada versi terbarunya, yaitu ES6 yang berfungsi agar source code dikenali oleh sistem browser.</li><li>React-dom.js: DOM digunakan untuk melakukan render komponen React menjadi HTML agar bisa dibuka di browser.</li></ul><p>Demikianlah penjelasan mengenai React Js dan tutorialnya. Kamu bisa membuat aplikasi yang kamu inginkan dengan framework ini. Jika kamu ingin mendalami React Js, kamu bisa belajar lebih lanjut di program <a href="https://www.hacktiv8.com/fullstack/remote">Full Stack Hacktiv8 </a>untuk menjadi seorang Full Stack Developer. Info lebih lengkap kunjungi my.hacktiv8.com/fsjs</p>  
+
+                        <div class="post-share">
+                            <span class="post-share-label">Share this article: </span>
+                            <a class="social-share facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/" onclick="window.open(this.href, 'share-facebook', 'width=550, height=296');return false;"><svg class="svg-facebook svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"></path></svg>
+</a>
+                            <a class="social-share twitter-share" href="https://www.twitter.com/share?text=Cara%20Membuat%20Website%20Dengan%20React%20Js&amp;url=https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/" onclick="window.open(this.href, 'share-twitter', 'width=550, height=235');return false;"><svg class="svg-twitter svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"></path></svg></a>
+                            <a class="social-share linkedin-share" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/&amp;title=Cara%20Membuat%20Website%20Dengan%20React%20Js&amp;summary=Cara%20Membuat%20Website%20Dengan%20React%20Js&amp;source=https://blog.hacktiv8.com" target="_blank"><svg class="svg-linkedin svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z"></path></svg>
+</a> 
+                            <span class="social-share bookmark-share" id="copy" data-clipboard-text="https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/"><svg class="svg-bookmark svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M405.2 64h-21c15 5.7 22.8 20.6 22.8 42.7v298.7c0 22.1-7 37.3-22.8 42.7h21c23.7 0 42.8-19.2 42.8-42.7V106.7c0-23.5-19.1-42.7-42.8-42.7zM345.5 64.2c-1.4-.1-2.8-.2-4.2-.2H106.7C83.2 64 64 83.2 64 106.7v298.7c0 23.5 19.2 42.7 42.7 42.7h234.7c1.4 0 2.8-.1 4.2-.2 21.5-2.1 38.5-20.4 38.5-42.5V106.7c-.1-22.1-17.1-40.4-38.6-42.5zM208 256l-56-32-56 32V96h112v160z"></path></svg>
+</span>
+                            <span class="bookmark-popup">Link copied to clipboard!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="post-content-author">
+                        <div class="author-avatar">
+                            <a href="/author/hacktiv8/" title="HACKTIV8" class="author-hacktiv8">
+                                <img class="avatar avatar-80" src=" https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg " alt="HACKTIV8">
+                            </a>
+                        </div>
+
+                        <div class="author-desc">
+                            <span>Written by</span>
+                            <h4><a href="/author/hacktiv8/" title="HACKTIV8" class="author-name author-hacktiv8">HACKTIV8</a></h4>
+                                <p class="author-bio">HACKTIV8 is a 12-week web development coding bootcamp focusing on Full Stack JavaScript.</p>
+                        </div>
+                    </div>
+
+                    <div class="post-comment" style="display: none;">
+                        <button class="comment-load js-disqus-load" type="button" role="button" onclick="disqus(); return false;">Load Comments <span></span></button>
+
+                        <section class="disqus-comment">
+    <div id="disqus_thread"></div>
+    <script>
+    // =================
+    // disqus comment system loader
+    // =================
+    if( typeof(disqus_shortname) == 'undefined' || disqus_shortname.length == 0) {
+        $('.post-comment').css({ display: 'none' });
+    } 
+
+    var disqus_config = function () {
+        this.page.url = 'https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/';  
+        this.page.identifier = 'ghost-60deef99d7e686003bb7c307'
+    };
+
+    function disqus() {
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+
+        var disqus_load_btn = $('.js-disqus-load');
+        disqus_load_btn.attr('disabled', true);
+        disqus_load_btn.addClass('disabled');
+    }
+    </script>
+</section>
+                    </div>
+                    
+                </div>
+
+
+
+            </div>
+
+            <script>
+                function progressBar() {
+                    var readingBar = document.querySelector('.post-progress'),
+                        readingArea = document.querySelector('.post-inner').getBoundingClientRect(),
+                        windowHeight = window.innerHeight / 2;
+
+                        Math.round(readingBar.max - readingBar.value);
+                        readingArea.top > windowHeight && (readingBar.value = 0), readingArea.top < windowHeight && (readingBar.value = readingBar.max), readingArea.top <= windowHeight && readingArea.bottom >= windowHeight && (readingBar.value = readingBar.max * Math.abs(readingArea.top - windowHeight) / readingArea.height);
+                }
+
+                $(document).ready(function() {
+                    // When the user scrolls the page, execute progressBar 
+                    window.onscroll = function() {progressBar()};
+                });
+            </script>
+        </article>
+
+    </div>
+
+</main>
+
+<script>
+$(document).ready(function() {
+    $('.post-full-image a').simpleLightbox();
+});
+</script>
+
+
+<footer id="footer" class="site-footer">
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-column left">
+                <div class="footer-logo">
+                    <h2><a href="https://blog.hacktiv8.com">HACKTIV8 Blog</a></h2>
+                </div>
+            </div>
+
+            <div class="footer-column center">
+                <div class="footer-nav">
+                        
+
+                    <div class="copyright"><a href="https://blog.hacktiv8.com">HACKTIV8 Blog</a> © 2021 - All rights reserved.<br>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></div>
+                </div>
+            </div>
+
+            <div class="footer-column right">
+                <div class="social-link">
+                    <a href="https://www.facebook.com/hacktiv8id" target="_blank" rel="noopener"><svg class="svg-facebook svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"></path></svg>
+</a>
+                    <a href="https://twitter.com/hacktiv8id" target="_blank" rel="noopener"><svg class="svg-twitter svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"></path></svg></a>
+
+                                        
+                    <a href="https://feedly.com/i/subscription/feed/https://blog.hacktiv8.com/cara-membuat-website-dengan-react-js/rss/" target="_blank" rel="noopener"><svg class="svg-rss svg-social-media svg-icon svg-icon-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M119.9 336.1c-30.8 0-55.9 25.1-55.9 55.8 0 30.8 25.1 55.6 55.9 55.6 30.9 0 55.9-24.9 55.9-55.6 0-30.7-25-55.8-55.9-55.8z"></path><path d="M64 192v79.9c48 0 94.1 14.2 128 48.1 33.9 33.9 48 79.9 48 128h80c0-139.9-116-256-256-256z"></path><path d="M64 64v79.9c171 0 303.9 133 303.9 304.1H448C448 236.3 276 64 64 64z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="notification notification-subscribe">
+    <a class="notification-close" href="javascript:"></a>
+    You've successfully subscribed to HACKTIV8 Blog
+</div>
+
+<div class="notification notification-signup">
+    <a class="notification-close" href="javascript:"></a>
+    Great! Next, complete checkout for full access to HACKTIV8 Blog
+</div>
+
+<div class="notification notification-signin">
+    <a class="notification-close" href="javascript:"></a>
+    Welcome back! You've successfully signed in
+</div>
+
+<div class="notification notification-checkout">
+    <a class="notification-close" href="javascript:"></a>
+    Success! Your account is fully activated, you now have access to all content.
+</div>
+
+<div class="notification notification-billing-success">
+    <a class="notification-close" href="javascript:"></a>
+    Success! Your biliing information has been updated.
+</div>
+
+<div class="notification error notification-billing-cancel">
+    <a class="notification-close" href="javascript:"></a>
+    You've canceled to update your billing information.
+</div>
+    <script src="/assets/js/plugins.min.js?v=1c1332f033"></script>
+
+    <script src="/assets/js/index.js?v=1c1332f033"></script>
+
+    
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-75027356-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Event -->
+<script>fbq('track', 'ViewContent');</script>
+<!-- End Facebook Pixel Event -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJZ2C4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<script type="text/javascript" id="" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","597841967035840");fbq("set","agent","tmgoogletagmanager","597841967035840");fbq("track","PageView");fbq("track","ViewContent");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=597841967035840&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">var HACKTIV8_DOMAIN="https://hacktiv8.com",FACEBOOK_DOMAIN="https://www.facebook.com/",LIKEDIN_DOMAIN="https://www.linkedin.com/",GOOGLE_DOMAIN="www.google.com",TWITTER_DOMAIN="https://twitter.com/",pathname=window.location.pathname,url=new URL(window.location.href),utm_source=url.searchParams.get("utm_source"),referrer=document.referrer,gclid_data=url.searchParams.get("gclid");gclid_data&&0<gclid_data.length&&Cookies.set("gclid",gclid_data,{secure:!1,expires:90,domain:".hacktiv8.com"});
+var first_touches=[];try{first_touches=JSON.parse(Cookies.get("first_touches"))}catch(a){}referrer.slice(0,HACKTIV8_DOMAIN.length);
+referrer.slice(0,HACKTIV8_DOMAIN.length)!==HACKTIV8_DOMAIN&&(utm_source&&(utm_source&&"google"===utm_source.toLowerCase()&&first_touches.push("GOOGLE"),utm_source&&"fba"===utm_source.toLowerCase()&&first_touches.push("FBA"),utm_source&&"email"===utm_source.toLowerCase()&&first_touches.push("EMAIL"),utm_source&&"instagram"===utm_source.toLowerCase()&&first_touches.push("INSTAGRAM"),utm_source&&"offline"===utm_source.toLowerCase()&&first_touches.push("OFFLINE"),utm_source&&"lda"===utm_source.toLowerCase()&&
+first_touches.push("LDA"),utm_source&&"twa"===utm_source.toLowerCase()&&first_touches.push("TWA"),utm_source&&"rtb"===utm_source.toLowerCase()&&first_touches.push("RTB"),utm_source&&"criteo"===utm_source.toLowerCase()&&first_touches.push("CRITEO"),utm_source&&"referral"===utm_source.toLowerCase()&&first_touches.push("REFERRAL"),utm_source&&"other"===utm_source.toLowerCase()&&first_touches.push("OTHER")),!utm_source&&referrer.includes(GOOGLE_DOMAIN)&&first_touches.push("ORGANIC"),!utm_source&&referrer.includes(FACEBOOK_DOMAIN)&&
+first_touches.push("FBO"),!utm_source&&referrer.includes(LIKEDIN_DOMAIN)&&first_touches.push("LBO"),!utm_source&&referrer.includes(TWITTER_DOMAIN)&&first_touches.push("TWO"),utm_source||0!==referrer.length||first_touches.push("DIRECT"),Cookies.set("first_touches",JSON.stringify(first_touches),{secure:!1,expires:90,domain:".hacktiv8.com"}));pathname.includes("/thankyou")&&Cookies.remove("first_touches");pathname.includes("/process-payment")&&Cookies.remove("first_touches");</script>
+
+
+
+<script type="text/javascript" id="">function getCookie(c){c+="\x3d";var b=decodeURIComponent(document.cookie);b=b.split(";");for(var d=0;d<b.length;d++){for(var a=b[d];" "==a.charAt(0);)a=a.substring(1);if(0==a.indexOf(c))return a.substring(c.length,a.length)}return""}for(var els=document.getElementsByName("fbclickID"),i=0;i<els.length;i++)els[i].value=getCookie("_fbp");var gls=document.getElementsByName("gclickID");for(i=0;i<gls.length;i++)gls[i].value=getCookie("gclid");</script>
+</body></html>
